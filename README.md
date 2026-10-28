@@ -1,4 +1,4 @@
-# 🛡️ Vertifact — Evidence-Grounded AI Hallucination Detection & Verification Platform
+# 🛡️ Verifact — Evidence-Grounded AI Hallucination Detection & Verification Platform
 
 <div align="center">
 
