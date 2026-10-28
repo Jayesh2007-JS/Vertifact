@@ -44,7 +44,7 @@ def test_retrieve_autonomous_web_evidence_function():
 def test_api_autonomous_web_mode_no_documents_provided():
     """
     Validates that a user can simply send an AI answer with ZERO uploaded documents,
-    and Vertifact automatically fetches web knowledge and verifies the claims!
+    and ClaimCheck AI automatically fetches web knowledge and verifies the claims!
     """
     payload = {
         "ai_answer": "The Earth revolves around the Sun.",

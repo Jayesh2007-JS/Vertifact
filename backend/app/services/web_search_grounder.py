@@ -533,7 +533,7 @@ async def fetch_wikipedia_summary(title: str, client: httpx.AsyncClient) -> Docu
     """Fetches the lead extract and URL for a specific Wikipedia title."""
     clean_title = title.replace(" ", "_")
     summary_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{clean_title}"
-    headers = {"User-Agent": "Vertifact/1.0 (https://vertifact.ai; research@vertifact.ai)"}
+    headers = {"User-Agent": "ClaimCheckAI/1.0 (https://claimcheck.ai; research@claimcheck.ai)"}
 
     try:
         resp = await client.get(summary_url, headers=headers, timeout=5.0)
@@ -570,7 +570,7 @@ async def search_wikipedia(query: str, client: httpx.AsyncClient, max_results: i
         "utf8": 1,
         "srlimit": max_results
     }
-    headers = {"User-Agent": "Vertifact/1.0 (https://vertifact.ai; research@vertifact.ai)"}
+    headers = {"User-Agent": "ClaimCheckAI/1.0 (https://claimcheck.ai; research@claimcheck.ai)"}
 
     chunks: List[DocumentChunk] = []
 
@@ -599,7 +599,7 @@ async def search_duckduckgo_instant(query: str, client: httpx.AsyncClient) -> Do
         "no_html": "1",
         "skip_disambig": "1"
     }
-    headers = {"User-Agent": "Vertifact/1.0"}
+    headers = {"User-Agent": "ClaimCheckAI/1.0"}
 
     try:
         resp = await client.get(url, params=params, headers=headers, timeout=5.0)

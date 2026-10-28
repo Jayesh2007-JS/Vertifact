@@ -647,7 +647,7 @@ async def evaluate_claim_with_llm(
                     retrieval_method=retrieval_method,
                     confidence_metric="model_calibrated_evidence_alignment",
                     confidence_score=round(conf, 2),
-                    verification_method="vertifact_neural_engine"
+                    verification_method="claimcheck_neural_engine"
                 )
     except Exception:
         pass

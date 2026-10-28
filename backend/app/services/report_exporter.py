@@ -12,7 +12,7 @@ def export_report_to_json(report: VerificationReport) -> str:
 def export_report_to_markdown(report: VerificationReport) -> str:
     """Generates an executive, readable Markdown report."""
     md_lines = [
-        f"# Vertifact — Verification Report",
+        f"# VeriFact — Verification Report",
         f"**Report ID:** `{report.report_id}`  ",
         f"**Generated at:** {report.timestamp}  ",
         f"**Verification Engine:** {report.verification_engine}  ",

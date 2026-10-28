@@ -1,4 +1,4 @@
-"""Pydantic schemas and data models for Vertifact."""
+"""Pydantic schemas and data models for ClaimCheck AI."""
 
 from enum import Enum
 from typing import Literal
@@ -60,7 +60,7 @@ class ClaimResult(BaseModel):
     retrieval_method: Literal["uploaded_document", "external_source", "none"] = "uploaded_document"
     confidence_metric: str = "evidence_retrieval_and_nli_alignment"
     confidence_score: float = 0.0
-    verification_method: Literal["deterministic_nli", "vertifact_neural_engine", "hybrid_rule_engine", "llm_openai"] = "deterministic_nli"
+    verification_method: Literal["deterministic_nli", "claimcheck_neural_engine", "hybrid_rule_engine", "llm_openai"] = "deterministic_nli"
 
 
 
