@@ -1,4 +1,4 @@
-"""Regression and pipeline verification tests for ClaimCheck AI.
+"""Regression and pipeline verification tests for Vertifact.
 
 Tests cover:
 1. Motorola company claim verified as SUPPORTED using official source https://www.motorola.in/about

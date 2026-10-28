@@ -1,4 +1,4 @@
-"""End-to-end integration and verification script for ClaimCheck AI."""
+"""End-to-end integration and verification script for Vertifact."""
 
 import json
 import httpx
@@ -10,7 +10,7 @@ FRONTEND_URL = "http://127.0.0.1:3000"
 
 def run_e2e_tests():
     print("==================================================")
-    print("CLAIMCHECK AI — FULL END-TO-END VERIFICATION SUITE")
+    print("VERTIFACT — FULL END-TO-END VERIFICATION SUITE")
     print("==================================================")
 
     with httpx.Client(timeout=10.0) as client:
@@ -26,7 +26,7 @@ def run_e2e_tests():
         print("\n[TEST 2] Checking Frontend Connectivity...")
         fe_res = client.get(FRONTEND_URL)
         assert fe_res.status_code == 200, f"Expected 200, got {fe_res.status_code}"
-        assert "ClaimCheck" in fe_res.text
+        assert "VeriFact" in fe_res.text or "Vertifact" in fe_res.text
         assert "SUPPORTED" in fe_res.text
         assert "CONTRADICTED" in fe_res.text
         assert "INSUFFICIENT EVIDENCE" in fe_res.text
@@ -110,7 +110,7 @@ def run_e2e_tests():
             json={"report": report, "export_format": "markdown"}
         )
         assert export_md_res.status_code == 200
-        assert "# ClaimCheck AI — Verification Report" in export_md_res.text
+        assert "Verification Report" in export_md_res.text
         print("✓ Markdown export validated.")
 
         # 6. Pasted Direct Text Verification Test

@@ -1,4 +1,4 @@
-"""Configuration settings for ClaimCheck AI Backend."""
+"""Configuration settings for Vertifact Backend."""
 
 import os
 from pathlib import Path
@@ -37,7 +37,7 @@ load_env_file()
 
 
 class Settings(BaseModel):
-    APP_NAME: str = "VeriFact"
+    APP_NAME: str = "Vertifact"
     APP_VERSION: str = "1.0.0"
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     MAX_UPLOAD_SIZE_BYTES: int = 15 * 1024 * 1024  # 15 MB

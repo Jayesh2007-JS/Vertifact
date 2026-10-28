@@ -1,4 +1,4 @@
-"""FastAPI API routes for ClaimCheck AI."""
+"""FastAPI API routes for Vertifact."""
 
 import datetime
 import uuid
@@ -157,7 +157,7 @@ async def set_llm_config(req: LLMConfigRequest):
         model=clean_model,
         base_url=clean_base_url,
         status="active",
-        message=f"Successfully connected! ClaimCheck AI is now powered by ChatGPT ({clean_model})."
+        message=f"Successfully connected! Vertifact is now powered by ChatGPT ({clean_model})."
     )
 
 

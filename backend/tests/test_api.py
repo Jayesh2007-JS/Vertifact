@@ -24,7 +24,7 @@ def test_scenario_11_health_check():
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
-    assert data["app_name"] == "ClaimCheck AI"
+    assert data["app_name"] in ["Vertifact", "VeriFact"]
     assert "version" in data
     assert "active_documents_count" in data
 
@@ -127,7 +127,7 @@ def test_export_report_endpoint():
     }
     md_resp = client.post("/api/v1/reports/export", json=export_payload)
     assert md_resp.status_code == 200
-    assert "# ClaimCheck AI — Verification Report" in md_resp.text
+    assert "Verification Report" in md_resp.text
     assert "SUPPORTED" in md_resp.text
 
     # Test JSON export

@@ -1,4 +1,4 @@
-"""Main FastAPI application entry point for ClaimCheck AI."""
+"""Main FastAPI application entry point for Vertifact."""
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
