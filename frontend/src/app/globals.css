@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #fbfbf9;
+  --surface: #ffffff;
+  --surface-raised: #f5f4ef;
+  --ink: #111215;
+  --ink-secondary: #484b52;
+  --ink-muted: #787c85;
+  --border-hairline: #e6e4dc;
+  --border-strong: #111215;
+  --forest-ink: #1a4d2e;
+  --forest-bg: #f0f5f1;
+  --crimson-ink: #8b1e1e;
+  --crimson-bg: #fdf2f0;
+}
+
+body {
+  background-color: #fbfbf9;
+  color: #111215;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant editorial scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fbfbf9;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8d6ce;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111215;
+}
+
+/* Swiss Grid lines */
+.swiss-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+}
+
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid #e6e4dc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.015);
+}
+
+.gallery-card-subtle {
+  background: #f7f6f2;
+  border: 1px solid #eae8e1;
+}
+
+.hairline-b {
+  border-bottom: 1px solid #e6e4dc;
+}
+
+.hairline-t {
+  border-top: 1px solid #e6e4dc;
+}
+
+.hairline-r {
+  border-right: 1px solid #e6e4dc;
+}
